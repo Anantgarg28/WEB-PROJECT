@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anant's contact</title>
+    <link rel="stylesheet" href="port.css">
+    <script src="https://kit.fontawesome.com/a351f157f0.js" crossorigin="anonymous"></script>
+    <style>
+        #confirmation {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: #efc75e;
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about me.html">About</a></li>
+              <li><a href="portfolio page.html">Portfolio</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="testimonial.html">Testimonials</a></li>
+              <li><a href="resume.html">Resume</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+    <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fa-solid fa-envelope"></i>anantgarg56@gmail.com</p>
+              <p><i class="fa-solid fa-phone"></i>8938018747</p>
+              <div class="social-icons">
+                <a href="https://www.instagram.com/anant_garg/"><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/anant-garg-635b7520b"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+              <a href="" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+              <form id="contactForm" onsubmit="submitForm(event)">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                
+                <label for="email"></label>
+                <input type="email" id="email" name="Email" placeholder="Your Email" required>
+
+                
+                <textarea name="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="confirmation"></div>
+        <div class="copyright">
+          <p>Copyright.<i class="fa-solid fa-heart"></i> Made by Anant Garg</p>
+        </div>
+      </div>
+    </div>
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+    var confirmationBox = document.getElementById("confirmation");
+    confirmationBox.textContent = "Your response has been submitted";
+    confirmationBox.style.display = "block";
+    
+    setTimeout(function() {
+      confirmationBox.style.display = "none";
+    }, 3000);
+    
+    document.getElementById("contactForm").reset();
+  }
+</script>
+</body>
+</html>

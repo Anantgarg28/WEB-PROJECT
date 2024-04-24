@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="port.css">
+    <style>
+      .container{
+  padding: 10px 10%;
+      }
+      .image-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 100px; 
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about me.html">About</a></li>
+            <li><a href="portfolio page.html">Portfolio</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="testimonial.html">Testimonials</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="container">
+    <h1>Skills</h1>
+    <div class="tab-contents active-tab" id="skills">
+        <ul>
+            <li><span>UI/UX</span><br>Designing Web Interface</li>
+            <li><span>Web Development</span><br>Web app Development</li>
+            <li><span>App Development</span><br>Building Android/iOS apps</li>
+        </ul>
+    </div>
+    <div class="image-container">
+        <img src="html.jpeg" alt="Image 4" onmouseover="enlargeImage(this)" onmouseout="normalImage(this)">
+        <img src="css.jpeg" alt="Image 5" onmouseover="enlargeImage(this)" onmouseout="normalImage(this)">
+        <a href="react.jpeg"><img src="react.jpeg" alt="Image 6" onmouseover="enlargeImage(this)" onmouseout="normalImage(this)"></a>
+        <a href="python.jpeg"><img src="python.jpeg" alt="Image 7" onmouseover="enlargeImage(this)" onmouseout="normalImage(this)"></a>
+        <img src="cpp.jpeg" alt="Image 8" onmouseover="enlargeImage(this)" onmouseout="normalImage(this)">
+        <a href="java.jpeg"><img src="java.jpeg" alt="Image 9" onmouseover="enlargeImage(this)" onmouseout="normalImage(this)"></a>
+    </div>
+</div>
+</body>
+<script>
+  function enlargeImage(img) {
+      img.style.transform = "scale(1.5)";
+  }
+
+  function normalImage(img) {
+      img.style.transform = "scale(1)";
+  }
+</script>
+</html>
